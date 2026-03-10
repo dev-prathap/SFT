@@ -99,7 +99,7 @@ const applicationData: Record<string, any> = {
   "others": {
     title: "Infrastructure & Mining",
     subtitle: "Monitoring assets in the most remote locations",
-    image: "https://images.unsplash.com/photo-1581094288338-2314dddb7ecc?auto=format&fit=crop&q=80",
+    image: "https://images.unsplash.com/photo-1578319439584-104c94d37305?auto=format&fit=crop&q=80",
     challenge: "Mining sites and oil pipelines often span hundreds of kilometers through hostile terrain where continuous human presence is impossible.",
     solution: "HAWKE provides automated monitoring of remote assets, detecting leaks, security breaches, and ensuring operational compliance.",
     benefits: [

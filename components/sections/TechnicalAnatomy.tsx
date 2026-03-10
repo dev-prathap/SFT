@@ -1,72 +1,59 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Container } from "@/components/ui/Container";
-import { Section } from "@/components/ui/Section";
-import { Cpu, Battery, Radio, ShieldCheck } from "lucide-react";
-
-const components = [
-  {
-    icon: <Battery className="w-8 h-8" />,
-    name: "Solar Integration",
-    description: "Highly efficient thin-film solar arrays covering the upper envelope, providing continuous power for flight and sensors."
-  },
-  {
-    icon: <Cpu className="w-8 h-8" />,
-    name: "Edge AI Suite",
-    description: "On-board GPU-accelerated processing for real-time object detection, thermal analysis, and autonomous station-keeping."
-  },
-  {
-    icon: <Radio className="w-8 h-8" />,
-    name: "Encrypted Comms",
-    description: "Multi-band encrypted satellite and line-of-sight data links ensuring data integrity in hostile signal environments."
-  },
-  {
-    icon: <ShieldCheck className="w-8 h-8" />,
-    name: "Resilient Envelope",
-    description: "Multi-layered ripstop polymer with helium-retention liners, designed for 2,500+ operational hours before maintenance."
-  }
-];
+import Image from "next/image";
 
 export function TechnicalAnatomy() {
   return (
-    <Section className="bg-black border-y border-white/5">
-      <Container>
-        <div className="flex flex-col lg:flex-row gap-24">
-          <div className="lg:w-1/3">
-            <h2 className="text-gray-500 font-display font-bold text-xs uppercase tracking-[0.4em] mb-4">Precision Engineering</h2>
-            <p className="text-4xl md:text-5xl font-bold text-white mb-8 tracking-tighter uppercase leading-none">
-              The Anatomy <br /> of <span className="text-primary italic">Persistance</span>
-            </p>
-            <p className="text-gray-400 font-sans leading-relaxed mb-12">
-              Every HAWKE platform is a marvel of materials science and autonomous systems, optimized for the extreme conditions of the upper atmosphere.
-            </p>
-            <div className="p-8 border border-primary/20 bg-primary/5">
-              <p className="text-primary font-bold text-xs uppercase tracking-widest mb-2">Build Quality</p>
-              <p className="text-white text-sm font-sans">99.9% Reliability Rating in Sub-Zero Conditions</p>
-            </div>
-          </div>
+    <section className="bg-black relative py-32 md:py-48 px-6 md:px-24 overflow-hidden border-b border-white/10 w-full min-h-[100svh] flex items-center">
+      <div className="max-w-[1400px] mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+        
+        <div className="space-y-12 z-20 order-2 lg:order-1">
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-5xl md:text-7xl lg:text-[6rem] font-bold tracking-tight uppercase leading-[0.9]"
+          >
+            Engineered <br /> For The Edge
+          </motion.h2>
 
-          <div className="lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-8">
-            {components.map((comp, index) => (
-              <motion.div
-                key={comp.name}
-                initial={{ opacity: 0, y: 20 }}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-16 pt-8">
+            {[
+              { title: "Solar Integration", desc: "Multi-junction thin-film arrays yielding 4.8kW sustained power." },
+              { title: "Edge AI Suite", desc: "On-board GPU-accelerated processing for 15ms latency detection." },
+              { title: "Encrypted Comms", desc: "Triple-redundant AES-256 encrypted satellite uplink." },
+              { title: "Resilient Envelope", desc: "Self-healing thermoplastic elastomer with nano-fiber reinforcement." },
+            ].map((comp, i) => (
+              <motion.div 
+                key={i}
+                initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-white/5 p-10 border border-white/10 hover:border-primary/50 transition-all group"
+                transition={{ delay: i * 0.1 }}
+                className="border-t border-white/20 pt-6"
               >
-                <div className="text-primary mb-6 group-hover:scale-110 transition-transform duration-500 origin-left">
-                  {comp.icon}
-                </div>
-                <h3 className="text-xl font-bold text-white mb-4 uppercase tracking-tight">{comp.name}</h3>
-                <p className="text-gray-500 text-sm leading-relaxed">{comp.description}</p>
+                <h3 className="text-xs font-bold uppercase tracking-[0.2em] mb-4">{comp.title}</h3>
+                <p className="text-white/60 text-sm tracking-wide leading-relaxed">{comp.desc}</p>
               </motion.div>
             ))}
           </div>
         </div>
-      </Container>
-    </Section>
+
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          className="relative h-[60vh] lg:h-[90vh] w-full z-10 order-1 lg:order-2"
+        >
+          <Image 
+            src="/technical_anatomy_core_1771612154723.png"
+            alt="Hardware"
+            fill
+            className="object-contain"
+          />
+        </motion.div>
+      </div>
+    </section>
   );
 }

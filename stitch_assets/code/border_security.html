@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Border Security - Susan Future Technologies</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#00eeff",
+                        "background-light": "#f5f8f8",
+                        "background-dark": "#0f2223",
+                        "card-dark": "#1b2d2e",
+                        "border-dark": "#2a4041",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 overflow-x-hidden antialiased">
+<div class="relative flex min-h-screen w-full flex-col">
+<!-- Header -->
+<header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-border-dark bg-background-light/95 dark:bg-background-dark/95 backdrop-blur px-6 py-4 lg:px-10">
+<div class="flex items-center gap-4 text-slate-900 dark:text-white">
+<div class="size-6 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 11.2727C44 14.0109 39.8386 16.3957 33.69 17.6364C39.8386 18.877 44 21.2618 44 24C44 26.7382 39.8386 29.123 33.69 30.3636C39.8386 31.6043 44 33.9891 44 36.7273C44 40.7439 35.0457 44 24 44C12.9543 44 4 40.7439 4 36.7273C4 33.9891 8.16144 31.6043 14.31 30.3636C8.16144 29.123 4 26.7382 4 24C4 21.2618 8.16144 18.877 14.31 17.6364C8.16144 16.3957 4 14.0109 4 11.2727C4 7.25611 12.9543 4 24 4C35.0457 4 44 7.25611 44 11.2727Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em] hidden sm:block">Susan Future Technologies</h2>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em] sm:hidden">SFT</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8">
+<div class="hidden md:flex items-center gap-9">
+<a class="text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-primary text-sm font-medium leading-normal transition-colors" href="#">Products</a>
+<a class="text-primary text-sm font-bold leading-normal transition-colors" href="#">Applications</a>
+<a class="text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-primary text-sm font-medium leading-normal transition-colors" href="#">Mission</a>
+<a class="text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-primary text-sm font-medium leading-normal transition-colors" href="#">Contact</a>
+</div>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-9 px-4 bg-primary hover:bg-primary/90 transition-colors text-background-dark text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Request Demo</span>
+</button>
+</div>
+</header>
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="relative w-full h-[600px] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0 bg-cover bg-center" data-alt="Satellite view of dark terrain with glowing green grid overlay" style='background-image: linear-gradient(rgba(15, 34, 35, 0.7) 0%, rgba(15, 34, 35, 1) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuDAqYEtpFILmYSDm00HlF_ZDXhqhH6wT9gQkyOJpgJR97a0U79m_hUgv3AG2NLkLv-9IO4JYBZBGAu6W1cJSa0-4AFU_lcU7aScGz82iVixqNKHcvokNAA7sIt58nEti7R_JSfKV-pOhfoGUMKCqHDpd32Do7sEeVxU9dX6RgobUYhkMOxHzPozPdB6m0-M2zEJ2jzpBOjJo2Fu3NbMYE9jwvc2bsofjkpZxQpSOzfMtrUWNpzLFoUuIibtftIGg-8ddD8TRQBrzGI");'></div>
+<div class="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center gap-6">
+<div class="inline-flex items-center rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-medium text-primary backdrop-blur-sm mb-2">
+<span class="material-symbols-outlined text-[16px] mr-1">radar</span>
+                        Defense Application Suite
+                    </div>
+<h1 class="text-white text-5xl md:text-7xl font-bold tracking-tight max-w-4xl">
+                        Autonomous Border Security
+                    </h1>
+<p class="text-slate-300 text-lg md:text-xl max-w-2xl font-light">
+                        Deploy next-generation surveillance networks with integrated AI threat detection and autonomous response coordination.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4 mt-4">
+<button class="flex items-center justify-center rounded-lg h-12 px-8 bg-primary text-background-dark text-base font-bold transition-all hover:bg-primary/90">
+                            Start Simulation
+                        </button>
+<button class="flex items-center justify-center rounded-lg h-12 px-8 bg-transparent border border-white/20 text-white text-base font-bold hover:bg-white/5 transition-all">
+                            View Technical Specs
+                        </button>
+</div>
+</div>
+</section>
+<!-- Stats Bar -->
+<section class="border-y border-border-dark bg-background-dark/50 backdrop-blur-sm">
+<div class="container mx-auto px-4 py-8">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="flex flex-col items-center md:items-start gap-1">
+<span class="text-3xl font-bold text-white">10km+</span>
+<span class="text-sm text-slate-400 uppercase tracking-wider">Detection Range</span>
+</div>
+<div class="flex flex-col items-center md:items-start gap-1">
+<span class="text-3xl font-bold text-white">&lt; 0.05s</span>
+<span class="text-sm text-slate-400 uppercase tracking-wider">Latency</span>
+</div>
+<div class="flex flex-col items-center md:items-start gap-1">
+<span class="text-3xl font-bold text-white">99.9%</span>
+<span class="text-sm text-slate-400 uppercase tracking-wider">Uptime</span>
+</div>
+<div class="flex flex-col items-center md:items-start gap-1">
+<span class="text-3xl font-bold text-white">AES-256</span>
+<span class="text-sm text-slate-400 uppercase tracking-wider">Encryption</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Sensor Integration Grid -->
+<section class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+<div class="flex flex-col gap-4 mb-12">
+<h2 class="text-primary text-sm font-bold uppercase tracking-wider">Sensor Integration</h2>
+<h3 class="text-white text-3xl md:text-4xl font-bold max-w-2xl">Multi-Spectrum Surveillance Architecture</h3>
+<p class="text-slate-400 text-lg max-w-2xl">
+                        Our integrated sensor suite combines thermal, optical, and radar data to provide uncompromised visibility in all weather conditions, day or night.
+                    </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Card 1 -->
+<div class="group relative overflow-hidden rounded-xl border border-border-dark bg-card-dark p-6 transition-all hover:border-primary/50 hover:shadow-[0_0_30px_rgba(0,238,255,0.1)]">
+<div class="absolute -right-4 -top-4 size-24 bg-primary/5 blur-2xl transition-all group-hover:bg-primary/10"></div>
+<div class="mb-6 inline-flex size-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-[28px]">thermostat</span>
+</div>
+<h4 class="mb-2 text-xl font-bold text-white">Thermal Imaging</h4>
+<p class="text-slate-400 text-sm leading-relaxed">
+                            Cryogenically cooled mid-wave infrared sensors capable of detecting heat signatures from personnel at 10km and vehicles at 25km.
+                        </p>
+<div class="mt-6 flex items-center gap-2 text-sm font-bold text-primary opacity-0 transition-opacity group-hover:opacity-100">
+<span>View Specs</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group relative overflow-hidden rounded-xl border border-border-dark bg-card-dark p-6 transition-all hover:border-primary/50 hover:shadow-[0_0_30px_rgba(0,238,255,0.1)]">
+<div class="absolute -right-4 -top-4 size-24 bg-primary/5 blur-2xl transition-all group-hover:bg-primary/10"></div>
+<div class="mb-6 inline-flex size-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-[28px]">landscape</span>
+</div>
+<h4 class="mb-2 text-xl font-bold text-white">LiDAR Mapping</h4>
+<p class="text-slate-400 text-sm leading-relaxed">
+                            Real-time 3D terrain mapping generating 2.5 million points per second for autonomous patrol navigation and cover analysis.
+                        </p>
+<div class="mt-6 flex items-center gap-2 text-sm font-bold text-primary opacity-0 transition-opacity group-hover:opacity-100">
+<span>View Specs</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group relative overflow-hidden rounded-xl border border-border-dark bg-card-dark p-6 transition-all hover:border-primary/50 hover:shadow-[0_0_30px_rgba(0,238,255,0.1)]">
+<div class="absolute -right-4 -top-4 size-24 bg-primary/5 blur-2xl transition-all group-hover:bg-primary/10"></div>
+<div class="mb-6 inline-flex size-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-[28px]">visibility</span>
+</div>
+<h4 class="mb-2 text-xl font-bold text-white">Long-Range Optical</h4>
+<p class="text-slate-400 text-sm leading-relaxed">
+                            Ultra-high resolution 8K optical sensors with 120x zoom for positive identification and facial recognition integration.
+                        </p>
+<div class="mt-6 flex items-center gap-2 text-sm font-bold text-primary opacity-0 transition-opacity group-hover:opacity-100">
+<span>View Specs</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Data Processing / Feature Split -->
+<section class="relative py-20 bg-[#0c1a1b]">
+<div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/5 via-transparent to-transparent opacity-50"></div>
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<div class="flex flex-col lg:flex-row items-center gap-16">
+<!-- Content -->
+<div class="w-full lg:w-1/2 flex flex-col gap-8">
+<div>
+<h2 class="text-primary text-sm font-bold uppercase tracking-wider mb-2">Neural Processing</h2>
+<h3 class="text-white text-3xl md:text-4xl font-bold mb-4">Autonomous Threat Classification</h3>
+<p class="text-slate-400 text-lg">
+                                    Our proprietary edge-computing nodes process sensor data locally, identifying threats in microseconds without reliance on cloud connectivity.
+                                </p>
+</div>
+<div class="flex flex-col gap-6">
+<div class="flex gap-4">
+<div class="flex-shrink-0 size-10 rounded-full bg-border-dark flex items-center justify-center text-primary border border-primary/20">
+<span class="material-symbols-outlined">memory</span>
+</div>
+<div>
+<h4 class="text-white font-bold text-lg">Edge AI Compute</h4>
+<p class="text-slate-400 text-sm">Dedicated neural processing units analyze video feeds in real-time.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="flex-shrink-0 size-10 rounded-full bg-border-dark flex items-center justify-center text-primary border border-primary/20">
+<span class="material-symbols-outlined">share</span>
+</div>
+<div>
+<h4 class="text-white font-bold text-lg">Mesh Network Sync</h4>
+<p class="text-slate-400 text-sm">Automatic target handoff between sensor towers and drone units.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="flex-shrink-0 size-10 rounded-full bg-border-dark flex items-center justify-center text-primary border border-primary/20">
+<span class="material-symbols-outlined">lock</span>
+</div>
+<div>
+<h4 class="text-white font-bold text-lg">Quantum-Resistant Comms</h4>
+<p class="text-slate-400 text-sm">Military-grade encryption for all data transmission channels.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Graphic/Image -->
+<div class="w-full lg:w-1/2">
+<div class="relative rounded-2xl border border-border-dark bg-card-dark/50 backdrop-blur overflow-hidden p-2">
+<div class="absolute inset-0 bg-gradient-to-tr from-primary/10 to-transparent"></div>
+<div class="relative rounded-xl overflow-hidden aspect-video bg-black">
+<div class="absolute inset-0 bg-cover bg-center opacity-80" data-alt="Futuristic data interface with graphs and wireframe map visualizations in blue and cyan tones" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBPjQ3CYjgOH1NMcHxCS-9EMs6I9DMPeAscRkM5EwY8K1a8CCn7takHSVYbXSqTxAkslxodWlX_5XrI6ninLAZ7RYxTpdoJR673Mz3w_jx3oQQ6jBvUUAQhEeqSVmYWRX2aBsL2A_0KY1Dimq5wnjqf0txCl3UEK6tzcODoenYw1BeHecFTjOcrQw7lO8OEvtuTFMeRDogbdOdghBECHmaoDtrulva7fA2SWaUfCLUtbShfHkk5OdNWYKYrGuVMv8vWOPnMB4thpVU");'></div>
+<!-- UI Overlay Mockup -->
+<div class="absolute top-4 left-4 right-4 flex justify-between items-start">
+<div class="bg-black/60 backdrop-blur border border-primary/30 px-3 py-1 rounded text-xs text-primary font-mono">
+                                            LIVE FEED • SECTOR 7G
+                                        </div>
+<div class="flex gap-2">
+<div class="size-2 rounded-full bg-red-500 animate-pulse"></div>
+<span class="text-xs text-red-500 font-mono font-bold">DETECTING ACTIVITY</span>
+</div>
+</div>
+<div class="absolute bottom-4 left-4 right-4">
+<div class="h-1 w-full bg-white/10 rounded-full overflow-hidden">
+<div class="h-full w-2/3 bg-primary rounded-full"></div>
+</div>
+<div class="flex justify-between mt-1 text-[10px] text-primary/70 font-mono">
+<span>PROCESSOR LOAD: 67%</span>
+<span>TARGETS: 3</span>
+</div>
+</div>
+<!-- Targeting Reticle -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-24 border border-primary/50 rounded-full flex items-center justify-center">
+<div class="size-1 bg-primary rounded-full"></div>
+<div class="absolute top-0 w-px h-2 bg-primary"></div>
+<div class="absolute bottom-0 w-px h-2 bg-primary"></div>
+<div class="absolute left-0 h-px w-2 bg-primary"></div>
+<div class="absolute right-0 h-px w-2 bg-primary"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Call to Action -->
+<section class="py-24 px-4 sm:px-6 lg:px-8 border-t border-border-dark">
+<div class="max-w-4xl mx-auto text-center flex flex-col items-center gap-6">
+<h2 class="text-white text-3xl md:text-5xl font-bold">Secure Your Borders Today</h2>
+<p class="text-slate-400 text-lg max-w-2xl">
+                        Schedule a classified briefing to discuss how Susan Future Technologies can enhance your sovereign defense capabilities.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mt-4">
+<button class="flex items-center justify-center rounded-lg h-12 px-8 bg-primary text-background-dark text-base font-bold transition-all hover:bg-primary/90 min-w-[200px]">
+                            Contact Sales
+                        </button>
+<button class="flex items-center justify-center rounded-lg h-12 px-8 bg-transparent border border-border-dark text-white text-base font-bold hover:bg-white/5 transition-all min-w-[200px]">
+                            Download Whitepaper
+                        </button>
+</div>
+</div>
+</section>
+</main>
+<footer class="border-t border-border-dark bg-background-dark py-12 px-4 sm:px-6 lg:px-8">
+<div class="container mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex items-center gap-2 text-white">
+<div class="size-5 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 11.2727C44 14.0109 39.8386 16.3957 33.69 17.6364C39.8386 18.877 44 21.2618 44 24C44 26.7382 39.8386 29.123 33.69 30.3636C39.8386 31.6043 44 33.9891 44 36.7273C44 40.7439 35.0457 44 24 44C12.9543 44 4 40.7439 4 36.7273C4 33.9891 8.16144 31.6043 14.31 30.3636C8.16144 29.123 4 26.7382 4 24C4 21.2618 8.16144 18.877 14.31 17.6364C8.16144 16.3957 4 14.0109 4 11.2727C4 7.25611 12.9543 4 24 4C35.0457 4 44 7.25611 44 11.2727Z" fill="currentColor"></path>
+</svg>
+</div>
+<span class="font-bold text-sm tracking-wide">SUSAN FUTURE TECHNOLOGIES</span>
+</div>
+<div class="text-slate-500 text-xs">
+                    © 2023 Susan Future Technologies. All rights reserved. Classified.
+                </div>
+</div>
+</footer>
+</div>
+</body></html>

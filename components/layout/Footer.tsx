@@ -1,49 +1,45 @@
 import Link from "next/link";
-import { Container } from "../ui/Container";
 
 export function Footer() {
   return (
-    <footer className="bg-black border-t border-white/5 py-24">
-      <Container>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
-          <div className="col-span-1 md:col-span-2">
-            <Link href="/" className="text-2xl font-display font-bold tracking-tighter text-white">
-              SUSAN <span className="text-primary">FUTURE</span>
-            </Link>
-            <p className="mt-6 text-gray-500 max-w-sm font-sans text-sm leading-relaxed">
-              Pioneering persistent aerial intelligence for a safer, more sustainable world through HAWKE aerostats.
-            </p>
-          </div>
-          
-          <div>
-            <h4 className="font-display font-bold uppercase tracking-widest text-white text-xs mb-6">Product</h4>
-            <ul className="space-y-4">
-              <li><Link href="/hawke" className="text-gray-500 hover:text-primary text-xs uppercase tracking-wider transition-colors">HAWKE Platform</Link></li>
-              <li><Link href="/#applications" className="text-gray-500 hover:text-primary text-xs uppercase tracking-wider transition-colors">Applications</Link></li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="font-display font-bold uppercase tracking-widest text-white text-xs mb-6">Company</h4>
-            <ul className="space-y-4">
-              <li><Link href="/about" className="text-gray-500 hover:text-primary text-xs uppercase tracking-wider transition-colors">Our Mission</Link></li>
-              <li><Link href="/awards" className="text-gray-500 hover:text-primary text-xs uppercase tracking-wider transition-colors">Recognition</Link></li>
-              <li><Link href="/news" className="text-gray-500 hover:text-primary text-xs uppercase tracking-wider transition-colors">Updates</Link></li>
-              <li><Link href="/contact" className="text-gray-500 hover:text-primary text-xs uppercase tracking-wider transition-colors">Contact</Link></li>
-            </ul>
-          </div>
-        </div>
+    <footer className="bg-black border-t-2 border-white text-white py-16 px-6 md:px-24">
+      <div className="mx-auto w-full flex flex-col md:flex-row justify-between items-center gap-8 md:gap-0">
         
-        <div className="mt-24 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="text-gray-600 text-[10px] uppercase tracking-widest">
-            © 2026 Susan Future Technologies Pvt Ltd. All rights reserved.
-          </p>
-          <div className="flex space-x-8">
-            <Link href="/privacy" className="text-gray-600 hover:text-white text-[10px] uppercase tracking-widest transition-colors">Privacy Policy</Link>
-            <Link href="/terms" className="text-gray-600 hover:text-white text-[10px] uppercase tracking-widest transition-colors">Terms of Use</Link>
-          </div>
+        <div className="flex space-x-8 lg:space-x-12 order-2 md:order-1 flex-wrap justify-center md:justify-start">
+          <Link href="/hawke" className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/60 hover:text-white transition-colors duration-300">
+            Vehicles
+          </Link>
+          <Link href="/about" className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/60 hover:text-white transition-colors duration-300">
+            About
+          </Link>
+          <Link href="/about" className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/60 hover:text-white transition-colors duration-300">
+            Mission
+          </Link>
+          <Link href="/news" className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/60 hover:text-white transition-colors duration-300">
+            News
+          </Link>
+          <Link href="/contact" className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/60 hover:text-white transition-colors duration-300">
+            Contact
+          </Link>
         </div>
-      </Container>
+
+        <div className="order-1 md:order-2">
+          <Link href="/" className="text-xl md:text-2xl font-bold tracking-tighter uppercase flex items-center gap-2">
+            SUSAN <span className="opacity-60">FUTURE</span>
+          </Link>
+        </div>
+
+      </div>
+
+      <div className="mx-auto w-full mt-16 flex flex-col items-center justify-center pt-8 border-t border-white/10 gap-4 md:flex-row md:justify-between text-[10px] font-bold tracking-[0.2em] uppercase text-white/30">
+        <p>
+          © 2026 SUSAN FUTURE TECHNOLOGIES. ALL RIGHTS RESERVED.
+        </p>
+        <div className="flex space-x-6">
+          <Link href="/privacy" className="hover:text-white transition-colors">Privacy</Link>
+          <Link href="/terms" className="hover:text-white transition-colors">Terms</Link>
+        </div>
+      </div>
     </footer>
   );
 }

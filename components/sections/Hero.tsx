@@ -42,7 +42,7 @@ export function Hero({
             loop
             muted
             playsInline
-            className="h-full w-full object-cover opacity-60"
+            className="h-full w-full object-cover opacity-70"
           >
             <source src={videoSrc} type="video/mp4" />
           </video>
@@ -57,64 +57,54 @@ export function Hero({
         ) : (
           <div className="h-full w-full bg-gradient-to-b from-nearblack to-black" />
         )}
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/20" />
       </div>
 
-      {/* Content */}
-      <Container className="relative z-10 pt-20">
+      {/* Hero UI Content */}
+      <Container className="relative z-20">
         <div className="max-w-4xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+            className="space-y-8"
           >
-            <h1 className="text-5xl md:text-8xl font-display font-bold text-white leading-[1.1] tracking-tighter">
-              {title}
-            </h1>
-          </motion.div>
-          
-          {subtitle && (
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-              className="mt-8 text-xl md:text-2xl text-gray-400 font-sans uppercase tracking-[0.2em] max-w-2xl leading-relaxed"
-            >
-              {subtitle}
-            </motion.p>
-          )}
+            <div className="space-y-4">
+              <p className="text-primary font-mono text-[10px] uppercase tracking-[0.6em] opacity-80">
+                Aerospace Intelligence Platform
+              </p>
+              <h1 className="text-6xl md:text-[8rem] font-bold text-white leading-[0.9] tracking-tighter uppercase whitespace-pre-line text-balance">
+                {title}
+              </h1>
+            </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-            className="mt-12 flex flex-wrap gap-4"
-          >
-            {ctaText && (
-              <Button size="lg" variant="primary">
-                {ctaText}
-              </Button>
+            {subtitle && (
+              <p className="text-lg md:text-xl text-gray-400 font-sans uppercase tracking-[0.3em] max-w-2xl leading-relaxed opacity-70">
+                {subtitle}
+              </p>
             )}
-            {secondaryCtaText && (
-              <Button size="lg" variant="outline">
-                {secondaryCtaText}
+
+            <div className="flex flex-wrap gap-6 pt-4">
+              <Button size="lg" variant="primary" className="px-12 h-16 text-[10px] tracking-[0.4em] uppercase">
+                {ctaText || "Explore"}
               </Button>
-            )}
+              <Button size="lg" variant="outline" className="px-12 h-16 text-[10px] tracking-[0.4em] uppercase bg-white/5 backdrop-blur-sm">
+                {secondaryCtaText || "Mission Data"}
+              </Button>
+            </div>
           </motion.div>
         </div>
       </Container>
-
-      {/* Scroll indicator */}
-      {fullHeight && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1, duration: 1 }}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2"
-        >
-          <div className="w-[1px] h-20 bg-gradient-to-b from-primary to-transparent animate-pulse" />
-        </motion.div>
-      )}
+      
+      {/* Ultra-Minimal HUD Footer */}
+      <div className="absolute bottom-12 left-0 right-0 z-20">
+        <Container>
+          <div className="flex justify-between items-end border-t border-white/10 pt-8 opacity-40">
+            <p className="font-mono text-[8px] tracking-[0.4em] uppercase">Status: Connected</p>
+            <p className="font-mono text-[8px] tracking-[0.4em] uppercase text-right">Coordinate: 12.9716 N / 77.5946 E</p>
+          </div>
+        </Container>
+      </div>
     </div>
   );
 }

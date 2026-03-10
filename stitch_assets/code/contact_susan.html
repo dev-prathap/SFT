@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact Susan Future Technologies</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#00eeff",
+                        "background-light": "#f5f8f8",
+                        "background-dark": "#0f1112", 
+                        "surface-dark": "#161b1d",
+                        "border-dark": "#27393a",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: "Space Grotesk", sans-serif;
+        }
+        /* Subtle starfield effect overlay */
+        .starfield {
+            background-image: 
+                radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 3px),
+                radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 2px),
+                radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 3px);
+            background-size: 550px 550px, 350px 350px, 250px 250px;
+            background-position: 0 0, 40px 60px, 130px 270px;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display min-h-screen flex flex-col overflow-x-hidden">
+<!-- Navbar -->
+<header class="sticky top-0 z-50 w-full border-b border-solid border-border-dark bg-background-dark/80 backdrop-blur-md">
+<div class="flex items-center justify-between px-6 py-4 md:px-10 max-w-7xl mx-auto w-full">
+<div class="flex items-center gap-4 text-slate-100">
+<div class="size-6 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 11.2727C44 14.0109 39.8386 16.3957 33.69 17.6364C39.8386 18.877 44 21.2618 44 24C44 26.7382 39.8386 29.123 33.69 30.3636C39.8386 31.6043 44 33.9891 44 36.7273C44 40.7439 35.0457 44 24 44C12.9543 44 4 40.7439 4 36.7273C4 33.9891 8.16144 31.6043 14.31 30.3636C8.16144 29.123 4 26.7382 4 24C4 21.2618 8.16144 18.877 14.31 17.6364C8.16144 16.3957 4 14.0109 4 11.2727C4 7.25611 12.9543 4 24 4C35.0457 4 44 7.25611 44 11.2727Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-wider uppercase hidden sm:block">Susan Future Tech</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium hover:text-primary transition-colors uppercase tracking-widest" href="#">Missions</a>
+<a class="text-sm font-medium hover:text-primary transition-colors uppercase tracking-widest" href="#">Vehicles</a>
+<a class="text-sm font-medium hover:text-primary transition-colors uppercase tracking-widest" href="#">Career</a>
+<a class="text-sm font-medium hover:text-primary transition-colors uppercase tracking-widest" href="#">Shop</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="flex items-center justify-center rounded bg-primary px-5 py-2 text-background-dark text-sm font-bold uppercase tracking-widest hover:bg-white transition-colors duration-300">
+<span class="truncate">Launch Schedule</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="flex-grow w-full relative">
+<!-- Background Elements -->
+<div class="absolute inset-0 z-0 pointer-events-none opacity-20 starfield"></div>
+<div class="relative z-10 max-w-7xl mx-auto px-6 py-12 md:px-10 lg:py-20 flex flex-col lg:flex-row gap-16 lg:gap-24">
+<!-- Left Column: Contact Form -->
+<div class="flex-1 max-w-2xl">
+<div class="mb-12">
+<p class="text-primary text-sm font-bold tracking-widest uppercase mb-2">Communication Link</p>
+<h1 class="text-5xl md:text-7xl font-bold tracking-tight text-white mb-4">Get in Touch</h1>
+<p class="text-slate-400 text-lg max-w-lg">Initiate secure communication sequence. Our mission control specialists are standing by for your inquiry.</p>
+</div>
+<form class="space-y-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<label class="block">
+<span class="text-slate-300 text-sm font-medium uppercase tracking-wider mb-2 block">First Name</span>
+<input class="w-full bg-surface-dark border-b border-border-dark focus:border-primary text-white p-4 outline-none transition-all duration-300 placeholder:text-slate-600 rounded-t-sm" placeholder="ENTER FIRST NAME" type="text"/>
+</label>
+<label class="block">
+<span class="text-slate-300 text-sm font-medium uppercase tracking-wider mb-2 block">Last Name</span>
+<input class="w-full bg-surface-dark border-b border-border-dark focus:border-primary text-white p-4 outline-none transition-all duration-300 placeholder:text-slate-600 rounded-t-sm" placeholder="ENTER LAST NAME" type="text"/>
+</label>
+</div>
+<label class="block">
+<span class="text-slate-300 text-sm font-medium uppercase tracking-wider mb-2 block">Email Address</span>
+<input class="w-full bg-surface-dark border-b border-border-dark focus:border-primary text-white p-4 outline-none transition-all duration-300 placeholder:text-slate-600 rounded-t-sm" placeholder="ENTER EMAIL ADDRESS" type="email"/>
+</label>
+<label class="block">
+<span class="text-slate-300 text-sm font-medium uppercase tracking-wider mb-2 block">Inquiry Type</span>
+<select class="w-full bg-surface-dark border-b border-border-dark focus:border-primary text-white p-4 outline-none transition-all duration-300 rounded-t-sm appearance-none cursor-pointer">
+<option>GENERAL INQUIRY</option>
+<option>COMMERCIAL LAUNCH</option>
+<option>PRESS &amp; MEDIA</option>
+<option>CAREERS</option>
+</select>
+</label>
+<label class="block">
+<span class="text-slate-300 text-sm font-medium uppercase tracking-wider mb-2 block">Message Transmission</span>
+<textarea class="w-full bg-surface-dark border-b border-border-dark focus:border-primary text-white p-4 outline-none transition-all duration-300 placeholder:text-slate-600 rounded-t-sm resize-none" placeholder="ENTER YOUR MESSAGE DETAILS..." rows="4"></textarea>
+</label>
+<div class="pt-4">
+<button class="group relative inline-flex items-center gap-3 overflow-hidden rounded bg-transparent px-8 py-4 text-white ring-1 ring-white/20 hover:ring-primary transition-all duration-300" type="button">
+<span class="absolute inset-0 bg-primary/10 translate-y-[100%] group-hover:translate-y-[0%] transition-transform duration-300 ease-out"></span>
+<span class="material-symbols-outlined text-primary group-hover:text-white transition-colors">send</span>
+<span class="relative text-sm font-bold uppercase tracking-widest group-hover:text-primary transition-colors">Transmit Message</span>
+</button>
+</div>
+</form>
+</div>
+<!-- Right Column: Info & Map -->
+<div class="lg:w-[420px] flex flex-col gap-10">
+<!-- Info Cards -->
+<div class="grid grid-cols-1 gap-8">
+<div class="border-l-2 border-primary/30 pl-6 py-1">
+<h3 class="text-white text-lg font-bold uppercase tracking-wider mb-1">Headquarters</h3>
+<p class="text-slate-400">1 Rocket Road<br/>Hawthorne, California</p>
+</div>
+<div class="border-l-2 border-primary/30 pl-6 py-1">
+<h3 class="text-white text-lg font-bold uppercase tracking-wider mb-1">Contact</h3>
+<p class="text-slate-400">info@susanfuture.tech<br/>+1 (555) 012-3456</p>
+</div>
+<div class="border-l-2 border-primary/30 pl-6 py-1">
+<h3 class="text-white text-lg font-bold uppercase tracking-wider mb-1">Press Inquiries</h3>
+<p class="text-slate-400">media@susanfuture.tech</p>
+</div>
+</div>
+<!-- Map Placeholder -->
+<div class="relative w-full aspect-square bg-surface-dark rounded-lg overflow-hidden border border-border-dark group">
+<div class="absolute inset-0 bg-cover bg-center opacity-60 grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="Satellite view of earth from space showing city lights at night" data-location="Hawthorne, California" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDcKTZnoE5AUhfaG7blP9zkxvRyEg4W_HFfXB2198rOa1r-7TiPwkf1KggK2i5kaQUfLpc1PmEzvnu-Kk466d3rx4k0k7kPE3GsuyJhBKZMtDmDXDGaVdRvW6NRiQSSPuzV_AVo60JV6KkLJzrBdPutFkj7rzZ4Nh0_0QFFXnvVCU5IFopBQXUGju0uAX0ZqKikIUW3KYE9rp47M3RMMUr7x0d5YK-oovYmIxm9esmRX1rZf3JmwPbyX_h9kn7L-JZrgonlF4jAnJw');">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent"></div>
+<!-- Map Overlay UI -->
+<div class="absolute bottom-6 left-6 right-6">
+<div class="flex justify-between items-end">
+<div>
+<p class="text-primary text-xs font-bold uppercase tracking-widest mb-1">Coordinates</p>
+<p class="text-white font-mono text-sm">33.9207° N, 118.3278° W</p>
+</div>
+<button class="size-10 rounded-full bg-white/10 backdrop-blur flex items-center justify-center hover:bg-primary hover:text-background-dark transition-all text-white">
+<span class="material-symbols-outlined text-lg">near_me</span>
+</button>
+</div>
+</div>
+<!-- Scanning line effect -->
+<div class="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent h-[20%] w-full animate-[scan_4s_ease-in-out_infinite] pointer-events-none border-b border-primary/20"></div>
+</div>
+<!-- Social Links -->
+<div class="flex gap-4 mt-auto pt-4">
+<a class="size-10 flex items-center justify-center rounded border border-white/10 text-white hover:border-primary hover:text-primary transition-all" href="#">
+<span class="text-sm font-bold">X</span>
+</a>
+<a class="size-10 flex items-center justify-center rounded border border-white/10 text-white hover:border-primary hover:text-primary transition-all" href="#">
+<span class="text-sm font-bold">In</span>
+</a>
+<a class="size-10 flex items-center justify-center rounded border border-white/10 text-white hover:border-primary hover:text-primary transition-all" href="#">
+<span class="text-sm font-bold">Yt</span>
+</a>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="border-t border-border-dark bg-background-dark py-12">
+<div class="max-w-7xl mx-auto px-6 md:px-10 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="text-slate-500 text-sm">© 2024 Susan Future Technologies. All systems nominal.</p>
+<div class="flex gap-8">
+<a class="text-slate-500 hover:text-primary text-sm transition-colors" href="#">Privacy Policy</a>
+<a class="text-slate-500 hover:text-primary text-sm transition-colors" href="#">Suppliers</a>
+</div>
+</div>
+</footer>
+<style>
+        @keyframes scan {
+            0% { top: -20%; opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { top: 120%; opacity: 0; }
+        }
+    </style>
+</body></html>

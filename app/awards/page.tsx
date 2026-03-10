@@ -1,7 +1,7 @@
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import { Hero } from "@/components/sections/Hero";
-import { Award, Star, Trophy, Target } from "lucide-react";
+import { Award, Star, Trophy, ShieldCheck } from "lucide-react";
 
 const awards = [
   {
@@ -29,9 +29,6 @@ const awards = [
     icon: Award,
   },
 ];
-
-// Reusing icon helper since Lucide imports need careful mapping sometimes in blocks
-import { ShieldCheck } from "lucide-react";
 
 export default function AwardsPage() {
   return (

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SFT News &amp; Media Hub</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#00eeff",
+                        "background-light": "#f5f8f8",
+                        "background-dark": "#101818",
+                        "surface-dark": "#1a2626",
+                        "border-dark": "#27393a",
+                        "text-secondary": "#9ab9bc",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"],
+                        "body": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased selection:bg-primary selection:text-background-dark">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Navbar -->
+<header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-border-dark bg-background-dark/80 backdrop-blur-md px-6 py-4 lg:px-10">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-3 text-white">
+<div class="size-8 text-primary">
+<svg class="h-full w-full" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 18.4228L42 11.475V34.3663C42 34.7796 41.7457 35.1504 41.3601 35.2992L24 42V18.4228Z" fill="currentColor" fill-rule="evenodd"></path>
+<path clip-rule="evenodd" d="M24 8.18819L33.4123 11.574L24 15.2071L14.5877 11.574L24 8.18819ZM9 15.8487L21 20.4805V37.6263L9 32.9945V15.8487ZM27 37.6263V20.4805L39 15.8487V32.9945L27 37.6263ZM25.354 2.29885C24.4788 1.98402 23.5212 1.98402 22.646 2.29885L4.98454 8.65208C3.7939 9.08038 3 10.2097 3 11.475V34.3663C3 36.0196 4.01719 37.5026 5.55962 38.098L22.9197 44.7987C23.6149 45.0671 24.3851 45.0671 25.0803 44.7987L42.4404 38.098C43.9828 37.5026 45 36.0196 45 34.3663V11.475C45 10.2097 44.2061 9.08038 43.0155 8.65208L25.354 2.29885Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-white text-xl font-bold tracking-tight">SFT</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-text-secondary hover:text-white transition-colors text-sm font-medium" href="#">Vehicles</a>
+<a class="text-text-secondary hover:text-white transition-colors text-sm font-medium" href="#">Launches</a>
+<a class="text-text-secondary hover:text-white transition-colors text-sm font-medium" href="#">Mission</a>
+<a class="text-white text-sm font-medium" href="#">News</a>
+<a class="text-text-secondary hover:text-white transition-colors text-sm font-medium" href="#">Shop</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden lg:flex w-full max-w-xs items-center rounded-lg bg-surface-dark border border-border-dark focus-within:border-primary transition-colors">
+<span class="material-symbols-outlined pl-3 text-text-secondary text-[20px]">search</span>
+<input class="w-full bg-transparent border-none py-2 pl-2 pr-4 text-sm text-white placeholder:text-text-secondary focus:ring-0" placeholder="Search news..." type="text"/>
+</div>
+<button class="flex items-center justify-center rounded-lg bg-primary px-5 py-2 text-sm font-bold text-background-dark hover:bg-primary/90 transition-colors">
+                    Sign In
+                </button>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-1 flex justify-center py-10 px-4 md:px-8">
+<div class="w-full max-w-7xl flex flex-col gap-10">
+<!-- Header Section -->
+<div class="flex flex-col gap-4 border-b border-border-dark pb-8">
+<h1 class="text-5xl md:text-6xl font-bold tracking-tighter text-white">News &amp; Media Hub</h1>
+<p class="text-text-secondary text-lg max-w-2xl font-light">
+                        Latest updates on our mission to the stars, including press releases, launch schedules, and technical insights.
+                    </p>
+</div>
+<!-- Filters -->
+<div class="flex flex-wrap items-center gap-8 overflow-x-auto pb-2 scrollbar-hide">
+<button class="group flex flex-col items-center gap-2 pb-1">
+<span class="text-white font-medium text-sm tracking-wide">Press Releases</span>
+<span class="h-0.5 w-full bg-primary rounded-full"></span>
+</button>
+<button class="group flex flex-col items-center gap-2 pb-1">
+<span class="text-text-secondary group-hover:text-white transition-colors font-medium text-sm tracking-wide">Events</span>
+<span class="h-0.5 w-0 group-hover:w-full bg-border-dark group-hover:bg-text-secondary transition-all duration-300 rounded-full"></span>
+</button>
+<button class="group flex flex-col items-center gap-2 pb-1">
+<span class="text-text-secondary group-hover:text-white transition-colors font-medium text-sm tracking-wide">Technical Papers</span>
+<span class="h-0.5 w-0 group-hover:w-full bg-border-dark group-hover:bg-text-secondary transition-all duration-300 rounded-full"></span>
+</button>
+<button class="group flex flex-col items-center gap-2 pb-1">
+<span class="text-text-secondary group-hover:text-white transition-colors font-medium text-sm tracking-wide">Media Assets</span>
+<span class="h-0.5 w-0 group-hover:w-full bg-border-dark group-hover:bg-text-secondary transition-all duration-300 rounded-full"></span>
+</button>
+</div>
+<!-- Featured News (Large Card) -->
+<div class="group relative w-full overflow-hidden rounded-xl border border-border-dark bg-surface-dark transition-all hover:border-primary/50">
+<div class="grid md:grid-cols-2 gap-0">
+<div class="relative h-64 md:h-auto overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Rocket launch with smoke trails against blue sky" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBS_SFu_N2YBXdF6g4g2qbbcJEUbBQVVp3skaM0msKYSRvF1N1vsFbFxF2uzk_HC7RcbKTn5zGvcGiGsHxy6LOZv_xRsjsXA2f86jBqdGF9jRRKwJT6G8pG9zgbBF6ErHwcFqnlqZe-a2o6LJeTjanmEYRXxXaDmM3bgTlGNn13bIxghokf2Q5iQE4RXtvYNcccXeVOkEM0JamuTXVYon_E0j61PNrG9yJFMp9ogFAElXEOzkA05woNmngYTathmJbcL3QxtWQx0Fk');"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dark via-transparent to-transparent md:bg-gradient-to-r"></div>
+</div>
+<div class="flex flex-col justify-center p-8 md:p-12 gap-4">
+<div class="flex items-center gap-3">
+<span class="bg-primary/10 text-primary px-2 py-1 rounded text-xs font-bold uppercase tracking-wider">Featured</span>
+<span class="text-text-secondary text-sm">Oct 24, 2023</span>
+</div>
+<h3 class="text-3xl font-bold text-white group-hover:text-primary transition-colors">Orbit Insertion Successful</h3>
+<p class="text-text-secondary leading-relaxed">
+                                The SFT-1 spacecraft has successfully entered low earth orbit following a flawless launch sequence. Telemetry confirms all systems are nominal and the solar array deployment has commenced.
+                            </p>
+<a class="inline-flex items-center gap-2 text-white font-medium mt-2 group-hover:gap-3 transition-all" href="#">
+                                Read Full Story 
+                                <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- News Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- News Item 1 -->
+<article class="group flex flex-col gap-4 rounded-xl border border-border-dark bg-surface-dark/50 p-4 transition-all hover:bg-surface-dark hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5">
+<div class="aspect-video w-full overflow-hidden rounded-lg bg-surface-dark">
+<div class="h-full w-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Rocket engine nozzle close up dark metallic" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA7zcQHImcVr-hkbI2gN_dbdP6WuyY9yLQlVIuXEe_nN8upoFqi-pF8HONw2BnFzMLCm_8bhtqWRGoWZcUAzJ9Oax5MnPvkXgtsbUBYnwmY9KmKjUS_jaanG1vwTyXzMoHSTt3Zcl8X7pNCbCMt9UukwyYIZgqIow_ZvkWmwJYDXb_5NVtKljMCDIs05ppJBfnOCafRb9HP1fGCJx0FrgQ455vOth-pnKAL-gBtl8TqjKzApO5pLghcHx-TRGwWjPJGoqgdXJ8jnY8');"></div>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="text-xs font-semibold text-primary uppercase tracking-wider">Technical</span>
+<span class="text-xs text-text-secondary">Oct 15, 2023</span>
+</div>
+<h4 class="text-xl font-bold text-white group-hover:text-primary transition-colors">Heavy Booster Static Fire</h4>
+<p class="text-text-secondary text-sm leading-relaxed line-clamp-3">
+                                Preliminary data shows the new Raptor engines performing above nominal efficiency targets during the 10-second duration test at our Texas facility.
+                            </p>
+</div>
+</article>
+<!-- News Item 2 -->
+<article class="group flex flex-col gap-4 rounded-xl border border-border-dark bg-surface-dark/50 p-4 transition-all hover:bg-surface-dark hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5">
+<div class="aspect-video w-full overflow-hidden rounded-lg bg-surface-dark">
+<div class="h-full w-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Earth from space showing curvature and atmosphere" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCuwI9mREaX9vemuYZzU8Dd7KnzMTMrF060M-j1Tv50-WBchXvlTxWRoVXHGDUj2F1Pf1sR-INJfSSgfAm0Ut17RobEbfp_vJrj4K1Oemb2hI7qz8oK5sAcAGs19jgQ9bwiDN5AbBRP5hebE_nLWBouIKG1AU_oUEcUZoux1cl0KCF9Eh4mSt15PJJP1S2y9BCtKqzT6vQfdcU-KPpVPVh3Y1yxhKmpdo6IAfPl6wpyjVo0Y41WZQSG6b4kC-LyoAMxbFWiJ270Z18');"></div>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="text-xs font-semibold text-primary uppercase tracking-wider">Events</span>
+<span class="text-xs text-text-secondary">Sep 30, 2023</span>
+</div>
+<h4 class="text-xl font-bold text-white group-hover:text-primary transition-colors">Aerospace Summit 2024</h4>
+<p class="text-text-secondary text-sm leading-relaxed line-clamp-3">
+                                Join our CEO Susan Vance for a keynote on the future of interplanetary transport systems and the roadmap to Mars colonization by 2030.
+                            </p>
+</div>
+</article>
+<!-- News Item 3 -->
+<article class="group flex flex-col gap-4 rounded-xl border border-border-dark bg-surface-dark/50 p-4 transition-all hover:bg-surface-dark hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5">
+<div class="aspect-video w-full overflow-hidden rounded-lg bg-surface-dark">
+<div class="h-full w-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Futuristic space station module interior white corridor" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC4si2tPqucUrwB4wYJoz2dZ__I9bbv56skIhBgLakQHVjxWrl8AN6oztVkASUtA6RpNQcmc_52qLpCL98Ju_diezoTQR9vHdvxjPsyAeioDHXlmHsbsxgM3fxsZJNyVg_2fsjQ7bjTFQYj-2B7Qo4x58BmZ0GKigQ0CT4UKzjMVHD2Lbvy4MwlDWhu4WR-HGcgTl_qpIo5KYP9J-PVoGIEDCLbuRyFqauypUJHn6TwWnmovahqcXCxSXeCNNLhIJxubdM8-CT1o74');"></div>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="text-xs font-semibold text-primary uppercase tracking-wider">Update</span>
+<span class="text-xs text-text-secondary">Sep 12, 2023</span>
+</div>
+<h4 class="text-xl font-bold text-white group-hover:text-primary transition-colors">Lunar Gateway Module</h4>
+<p class="text-text-secondary text-sm leading-relaxed line-clamp-3">
+                                Construction of the primary habitation module for the lunar gateway is now complete. Final vacuum chamber testing begins next week.
+                            </p>
+</div>
+</article>
+<!-- News Item 4 -->
+<article class="group flex flex-col gap-4 rounded-xl border border-border-dark bg-surface-dark/50 p-4 transition-all hover:bg-surface-dark hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5">
+<div class="aspect-video w-full overflow-hidden rounded-lg bg-surface-dark">
+<div class="h-full w-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Laboratory clean room with scientists working" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC-lJlDYy5bGWn7qfip_F5Aq9DvEufKraU3MiJqj3asqKHBZgZZec6eq2sNiutBJU8kh_WAjwuWFyumZVwBb8lP5kMZACL1WjUom7zWROvutuyC4oXdUlbki7RCtSdO02xFRNFZju52ADLG_9wanSGCDsGybEYRDadam821neqmLzpTCsfQK7A70WLemdvExorxfCthAGdPufiOeB9LUHVYoR29HU4-URcPKvmMjLGBS2eYQgEmqPlqFZypfnGrAa_8UmXrW-32S5E');"></div>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="text-xs font-semibold text-primary uppercase tracking-wider">Research</span>
+<span class="text-xs text-text-secondary">Aug 28, 2023</span>
+</div>
+<h4 class="text-xl font-bold text-white group-hover:text-primary transition-colors">Life Support Breakthrough</h4>
+<p class="text-text-secondary text-sm leading-relaxed line-clamp-3">
+                                Our bio-engineering team has achieved a breakthrough in oxygen recycling efficiency, critical for long-duration deep space missions.
+                            </p>
+</div>
+</article>
+<!-- News Item 5 -->
+<article class="group flex flex-col gap-4 rounded-xl border border-border-dark bg-surface-dark/50 p-4 transition-all hover:bg-surface-dark hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5">
+<div class="aspect-video w-full overflow-hidden rounded-lg bg-surface-dark">
+<div class="h-full w-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Night sky full of stars and mountains silhouette" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBcSJ_2_6YWVYlyPnTrAJg6LGgSoVCLep8flW-v0GoVED-8y99WPYWTLdTZdUseD-_KxcUdWskXO8EPnJfxo973NrkKyptWNeFwDphS5LBdVhbfOAU3NdQ9_vpxJtYFhq1sBt7GqcOXSTa_gJH1lCjOYmwvDRp9GtV9BF55RGm9aUzLMpbtDCPNagSEK0MVKtzlqIjcjFms1lG3Az3NNKDFFz5voeGGwbFcVGpBWB6deAtUcZc_cd4nw8fDZcVfF5SGJm4VhvcBTUM');"></div>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="text-xs font-semibold text-primary uppercase tracking-wider">Product</span>
+<span class="text-xs text-text-secondary">Aug 10, 2023</span>
+</div>
+<h4 class="text-xl font-bold text-white group-hover:text-primary transition-colors">Ion-X Engine Unveiled</h4>
+<p class="text-text-secondary text-sm leading-relaxed line-clamp-3">
+                                Introducing the Ion-X, our next generation electric propulsion system designed specifically for deep space heavy cargo transport.
+                            </p>
+</div>
+</article>
+<!-- News Item 6 -->
+<article class="group flex flex-col gap-4 rounded-xl border border-border-dark bg-surface-dark/50 p-4 transition-all hover:bg-surface-dark hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5">
+<div class="aspect-video w-full overflow-hidden rounded-lg bg-surface-dark">
+<div class="h-full w-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Satellite dish array at sunset" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBLWXqNz1kzU9aXMfoISBJ33gMHjzsJB9lswIOP2dem3QVIEFMnIxR5j7fzgz9JedjNeqsTPBPaCM3R9kpg59C8BTbMVHHv7VIrh42hq-WWmbmPwZYmR-j0WF2GOwOU1bev7iuZbi3uFwLn6pmVhCXc3POq1zqWAiJ8KlhEeYE6j8GmWzYwzzXPD2g9IKmbuEVj0skQP8-pkq9twe3s2gkPLGnSvqXrI6kpuH7wKevXDDaAHAklLo9EaF9gJO_R4G8L2A0XBYX-AkI');"></div>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="text-xs font-semibold text-primary uppercase tracking-wider">Infrastructure</span>
+<span class="text-xs text-text-secondary">July 15, 2023</span>
+</div>
+<h4 class="text-xl font-bold text-white group-hover:text-primary transition-colors">Ground Station Expansion</h4>
+<p class="text-text-secondary text-sm leading-relaxed line-clamp-3">
+                                Three new deep-space communication arrays have come online in the southern hemisphere, ensuring 24/7 coverage for Mars missions.
+                            </p>
+</div>
+</article>
+</div>
+<!-- Pagination -->
+<div class="flex items-center justify-center pt-8 border-t border-border-dark">
+<div class="flex items-center gap-2">
+<a class="flex h-10 w-10 items-center justify-center rounded-full border border-border-dark text-text-secondary hover:bg-surface-dark hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">chevron_left</span>
+</a>
+<a class="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-background-dark font-bold" href="#">1</a>
+<a class="flex h-10 w-10 items-center justify-center rounded-full border border-transparent text-text-secondary hover:bg-surface-dark hover:text-white transition-colors" href="#">2</a>
+<a class="flex h-10 w-10 items-center justify-center rounded-full border border-transparent text-text-secondary hover:bg-surface-dark hover:text-white transition-colors" href="#">3</a>
+<span class="flex h-10 w-10 items-center justify-center text-text-secondary">...</span>
+<a class="flex h-10 w-10 items-center justify-center rounded-full border border-transparent text-text-secondary hover:bg-surface-dark hover:text-white transition-colors" href="#">8</a>
+<a class="flex h-10 w-10 items-center justify-center rounded-full border border-border-dark text-text-secondary hover:bg-surface-dark hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">chevron_right</span>
+</a>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="border-t border-border-dark bg-surface-dark py-12 px-6 lg:px-10 mt-10">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-8">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-2 text-white">
+<div class="size-6 text-primary">
+<svg class="h-full w-full" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 18.4228L42 11.475V34.3663C42 34.7796 41.7457 35.1504 41.3601 35.2992L24 42V18.4228Z" fill="currentColor" fill-rule="evenodd"></path>
+<path clip-rule="evenodd" d="M24 8.18819L33.4123 11.574L24 15.2071L14.5877 11.574L24 8.18819ZM9 15.8487L21 20.4805V37.6263L9 32.9945V15.8487ZM27 37.6263V20.4805L39 15.8487V32.9945L27 37.6263ZM25.354 2.29885C24.4788 1.98402 23.5212 1.98402 22.646 2.29885L4.98454 8.65208C3.7939 9.08038 3 10.2097 3 11.475V34.3663C3 36.0196 4.01719 37.5026 5.55962 38.098L22.9197 44.7987C23.6149 45.0671 24.3851 45.0671 25.0803 44.7987L42.4404 38.098C43.9828 37.5026 45 36.0196 45 34.3663V11.475C45 10.2097 44.2061 9.08038 43.0155 8.65208L25.354 2.29885Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<span class="font-bold text-lg">Susan Future Technologies</span>
+</div>
+<p class="text-text-secondary text-sm max-w-xs">
+                        Pioneering the future of space exploration and sustainable life beyond Earth.
+                    </p>
+</div>
+<div class="flex gap-12 flex-wrap">
+<div class="flex flex-col gap-3">
+<h4 class="text-white font-bold text-sm uppercase tracking-wider">Company</h4>
+<a class="text-text-secondary hover:text-primary text-sm" href="#">About</a>
+<a class="text-text-secondary hover:text-primary text-sm" href="#">Careers</a>
+<a class="text-text-secondary hover:text-primary text-sm" href="#">Contact</a>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="text-white font-bold text-sm uppercase tracking-wider">Legal</h4>
+<a class="text-text-secondary hover:text-primary text-sm" href="#">Privacy Policy</a>
+<a class="text-text-secondary hover:text-primary text-sm" href="#">Terms of Service</a>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="text-white font-bold text-sm uppercase tracking-wider">Social</h4>
+<a class="text-text-secondary hover:text-primary text-sm" href="#">Twitter / X</a>
+<a class="text-text-secondary hover:text-primary text-sm" href="#">LinkedIn</a>
+<a class="text-text-secondary hover:text-primary text-sm" href="#">YouTube</a>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto pt-8 mt-8 border-t border-border-dark text-center md:text-left">
+<p class="text-text-secondary text-xs">© 2024 Susan Future Technologies. All rights reserved.</p>
+</div>
+</footer>
+</div>
+</body></html>

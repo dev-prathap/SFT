@@ -5,16 +5,14 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { Container } from "@/components/ui/Container";
-import { Button } from "@/components/ui/Button";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
-  { name: "HAWKE", href: "/hawke" },
-  { name: "Applications", href: "/#applications" },
-  { name: "About", href: "/about" },
-  { name: "Timeline", href: "/timeline" },
-  { name: "News", href: "/news" },
+  { name: "VEHICLES", href: "/hawke" },
+  { name: "APPLICATIONS", href: "/applications" },
+  { name: "MISSION", href: "/about" },
+  { name: "TIMELINE", href: "/timeline" },
+  { name: "NEWS", href: "/news" },
 ];
 
 export function Navigation() {
@@ -34,15 +32,15 @@ export function Navigation() {
     <nav
       className={cn(
         "fixed top-0 w-full z-50 transition-all duration-300",
-        scrolled ? "bg-black/80 backdrop-blur-md border-b border-white/10" : "bg-transparent"
+        scrolled ? "bg-black/90 backdrop-blur-md" : "bg-gradient-to-b from-black/80 to-transparent"
       )}
     >
-      <Container>
-        <div className="flex h-20 items-center justify-between">
+      <div className="w-full px-6 md:px-12">
+        <div className="flex h-24 items-center justify-between">
           <div className="flex items-center">
             <Link href="/" className="group flex items-center space-x-2">
-              <span className="text-xl font-display font-bold tracking-tighter text-white">
-                SUSAN <span className="text-primary">FUTURE</span>
+              <span className="text-2xl font-bold tracking-tighter text-white uppercase leading-none">
+                SUSAN <br /> <span className="text-white/60">FUTURE</span>
               </span>
             </Link>
           </div>
@@ -54,62 +52,57 @@ export function Navigation() {
                 key={link.name}
                 href={link.href}
                 className={cn(
-                  "text-xs font-display font-bold uppercase tracking-widest transition-colors hover:text-primary",
-                  pathname === link.href ? "text-primary" : "text-gray-400"
+                  "text-xs font-bold uppercase tracking-[0.2em] transition-all hover:text-white relative pb-1 group",
+                  pathname === link.href ? "text-white" : "text-white/60"
                 )}
               >
                 {link.name}
+                <span className={cn(
+                  "absolute bottom-0 left-0 w-full h-[1px] bg-white transform origin-left transition-transform duration-300",
+                  pathname === link.href ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
+                )} />
               </Link>
             ))}
-            {/* Live Status Indicator */}
-            <div className="hidden xl:flex items-center gap-3 px-4 py-2 bg-white/5 border border-white/10 rounded-none ml-4">
-              <div className="relative">
-                <div className="w-2 h-2 bg-primary rounded-full" />
-                <div className="absolute inset-0 w-2 h-2 bg-primary rounded-full animate-ping opacity-75" />
-              </div>
-              <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400">
-                Network Status: <span className="text-white">Active</span>
-              </span>
-            </div>
 
-            <Button variant="outline" size="sm" className="ml-4">
-              Request Demo
-            </Button>
+            <button className="ml-8 text-xs font-bold uppercase tracking-[0.2em] px-6 py-3 border border-white text-white hover:bg-white hover:text-black transition-all duration-300">
+              REQUEST DEMO
+            </button>
           </div>
 
           {/* Mobile menu button */}
           <div className="flex md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-400 hover:text-white"
+              className="text-white z-50 relative"
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
           </div>
         </div>
-      </Container>
+      </div>
 
-      {/* Mobile Nav */}
+      {/* Mobile Nav Fullscreen overlay */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-nearblack border-b border-white/10 overflow-hidden"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3 }}
+            className="fixed inset-0 z-40 bg-black flex flex-col justify-center items-center h-[100svh]"
           >
-            <div className="px-6 py-12 space-y-6">
+            <div className="flex flex-col items-center space-y-8 w-full px-6">
               {navLinks.map((link, index) => (
                 <motion.div
                   key={link.name}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
                 >
                   <Link
                     href={link.href}
                     onClick={() => setIsOpen(false)}
-                    className="block text-2xl font-display font-bold uppercase tracking-widest text-gray-400 hover:text-primary active:text-primary transition-colors"
+                    className="text-2xl font-bold uppercase tracking-[0.2em] text-white/70 hover:text-white transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -119,10 +112,11 @@ export function Navigation() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: navLinks.length * 0.1 }}
+                className="pt-8 w-full max-w-xs"
               >
-                <Button variant="primary" size="lg" className="w-full mt-8">
-                  Request Demo
-                </Button>
+                <button className="w-full py-4 border border-white text-white text-sm font-bold tracking-[0.2em] uppercase hover:bg-white hover:text-black transition-all">
+                  REQUEST DEMO
+                </button>
               </motion.div>
             </div>
           </motion.div>
